@@ -1,3 +1,7 @@
+@view-transition{
+  navigation: auto;
+}
+
 html, body {
   font-family: "Karla", sans-serif;
   height: 100% !important;
@@ -9,6 +13,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   background: #f8f8f8;
 }
+
 html h1, html h2, html h3, html h4, html h5, body h1, body h2, body h3, body h4, body h5 {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -16,6 +21,7 @@ html h1, html h2, html h3, html h4, html h5, body h1, body h2, body h3, body h4,
   text-transform: capitalize;
   line-height: 1.2;
   color: #091d25;
+  text-wrap: balance;
 }
 html h1.banner, html h2.banner, html h3.banner, html h4.banner, html h5.banner, body h1.banner, body h2.banner, body h3.banner, body h4.banner, body h5.banner {
   font-family: "Kaushan Script", sans-serif;
@@ -23,6 +29,7 @@ html h1.banner, html h2.banner, html h3.banner, html h4.banner, html h5.banner, 
 
 p {
   margin: 0px;
+  text-wrap: pretty;
 }
 
 ::selection {
