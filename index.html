@@ -60,7 +60,7 @@
         </div>
       </div>
     </div>
-    
+
     <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
     <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -400,7 +400,8 @@
                   <div class="fullwidth fullheight content-text valign-wrap">
                     <div class="valign-middle">
                       <p class="date">01 Enero</p>
-					            <p style="font-size: smaller;">Apoya el cursor sobre la imágen</p>
+					            <p class="hidden sm:block text-sm">Coloca el cursor sobre la imagen para más detalles</p>
+                      <p class="block sm:hidden text-sm">Toca la imagen para más detalles</p>
                       <p class="event-name">Ebaristo | Pimentel Temporada Verano </p>
                     </div>
                   </div>
@@ -422,7 +423,8 @@
                   <div class="fullwidth fullheight content-text valign-wrap">
                     <div class="valign-middle">
                       <p class="date">31 Diciembre</p>
-					            <p style=" font-size: smaller;">Apoya el cursor sobre la imágen</p>
+					            <p class="hidden sm:block text-sm">Coloca el cursor sobre la imagen para más detalles</p>
+                      <p class="block sm:hidden text-sm">Toca la imagen para más detalles</p>
                       <p class="event-name">Hotel Casa Andina Chiclayo</p>
                     </div>
                   </div>
@@ -444,7 +446,8 @@
                   <div class="fullwidth fullheight content-text valign-wrap">
                     <div class="valign-middle">
                       <p class="date">20 Noviembre</p>
-					            <p style=" font-size: smaller;">Apoya el cursor sobre la imágen</p>
+					            <p class="hidden sm:block text-sm">Coloca el cursor sobre la imagen para más detalles</p>
+                      <p class="block sm:hidden text-sm">Toca la imagen para más detalles</p>
                       <p class="event-name">Playa Las Rocas Festival</p>
                     </div>
                   </div>
@@ -466,7 +469,8 @@
                   <div class="fullwidth fullheight content-text valign-wrap">
                     <div class="valign-middle">
                       <p class="date">15 Octubre</p>
-					            <p style=" font-size: smaller;">Apoya el cursor sobre la imágen</p>
+					            <p class="hidden sm:block text-sm">Coloca el cursor sobre la imagen para más detalles</p>
+                      <p class="block sm:hidden text-sm">Toca la imagen para más detalles</p>
                       <p class="event-name">Bass Disco Warehouse Chiclayo</p>
                     </div>
                   </div>
@@ -649,6 +653,13 @@
           remainingDuration: true,
           toggleDuration: true
         });
+
+        const startPlayback = () => {
+          myPlaylist.play();
+          document.removeEventListener('click', startPlayback); 
+        };
+
+        document.addEventListener('click', startPlayback);
       });
     </script>
   </body>
