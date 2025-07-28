@@ -176,7 +176,6 @@ p.normal-coloring {
   height: auto;
   line-height: inherit;
   width: 100%;
-  float: left;
   position: relative;
   border: 1px solid #cccccc;
   font-size: 16px;
@@ -200,6 +199,7 @@ p.normal-coloring {
 /* Default option Style */
 .def-select {
   -webkit-appearance: none;
+  appearance: none;
   background: url("../images/select-arrow.png") no-repeat;
   background-color: white;
   background-position: right 15px center;
@@ -2602,7 +2602,7 @@ label {
   width: calc(25% - 5px);
   height: 80px;
   display: inline-block;
-  float: left;
+  float: none
 }
 .popover-event .image img {
   width: 100%;
