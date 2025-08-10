@@ -167,7 +167,7 @@
               <p>Con más de 20 años de experiencia, Lenin ha sido protagonista en los principales eventos sociales y discotecas de Chiclayo y el norte del Perú. Su trayectoria destaca por su versatilidad, energía y conocimiento musical, adaptándose con maestría a cualquier tipo de público.</p>
               <p><b>🎧 Estilo Musical:</b> Latin, Pop, Anglo, House, EDM, Rock, Reggaetón, Pachanga, Salsa, Hits Retro y actuales.</p>
               <p><b>🎶 Perfil:</b> DJ , DVJ, Remixer, Productor Edits, Mixes y Remixes </p>
-              <p><b>🌟 Experiencia Disco:</b> Zouka, Magno, Uma, Toñitos Vip, EbaristoBeach, Asia Disco, Full Vaso, Bass, Taberna Del Diablo, Hill House, La Reina Disco Club, Kalhu Disco, Cascada Disco, Xtream Disco, Aura, Derby. </p>
+              <p><b>🌟 Experiencia Disco:</b> Zouka, Magno, Uma, Toñitos Vip, Ebaristo Beach, Asia Disco, Full Vaso, Bass, Taberna del Diablo, Hill House, La Reina Disco Club, Kalhu Disco, Cascada Disco, Xtream Disco, Aura, Derby. </p>
               <p><b>🔊 Equipamiento Profesional:</b></p>
               <p> 
                 <ul> 
@@ -482,68 +482,6 @@
       </div>
     </section>
 
-    <!-- 
-    <section class="news-grid sec-pad">
-      <div class="container">
-        <div class="text-center sec-q-pad-b">
-          <div class="title-underlined">
-            <h1>News &amp; Articles</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-4">
-            <div class="news-item">
-              <a href="">
-                <div class="image">
-                  <img src="./assets/images/news-grid1.jpg" alt="">
-                  <div class="overlay"></div>
-                </div>
-              </a>
-              <a href="">
-                <h3 class="mar-b-10">Exploring the New York</h3>
-              </a>
-              <p class="news-info"><i class="ion-calendar"></i> Oct 14, 2017 <span>/</span> <i class="ion-chatbox-working"></i> 14</p>
-              <p>Vivamus consequat nisi ac elit venenatis egestas eget ac erat. Integer semper turpis sit amet tortor ornare ultrices. In ac convallis lectus, in cursus leo.</p>
-              <a href="" class="def-btn btn-bg-light" data-text="Leer Más"><span>Leer Más</span></a>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="news-item">
-              <a href="">
-                <div class="image">
-                  <img src="./assets/images/news-grid2.jpg" alt="">
-                  <div class="overlay"></div>
-                </div>
-              </a>
-              <a href="">
-                <h3 class="mar-b-10">Prepare Yourself for the beach party</h3>
-              </a>
-              <p class="news-info"><i class="ion-calendar"></i> Oct 14, 2017 <span>/</span> <i class="ion-chatbox-working"></i> 14</p>
-              <p>Vivamus consequat nisi ac elit venenatis egestas eget ac erat. Integer semper turpis sit amet tortor ornare ultrices. In ac convallis lectus, in cursus leo.</p>
-              <a href="" class="def-btn btn-bg-light" data-text="Leer Más"><span>Leer Más</span></a>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="news-item">
-              <a href="">
-                <div class="image">
-                  <img src="./assets/images/news-grid3.jpg" alt="">
-                  <div class="overlay"></div>
-                </div>
-              </a>
-              <a href="">
-                <h3 class="mar-b-10">Studio Recording for new album!</h3>
-              </a>
-              <p class="news-info"><i class="ion-calendar"></i> Oct 14, 2017 <span>/</span> <i class="ion-chatbox-working"></i> 14</p>
-              <p>Vivamus consequat nisi ac elit venenatis egestas eget ac erat. Integer semper turpis sit amet tortor ornare ultrices. In ac convallis lectus, in cursus leo.</p>
-              <a href="" class="def-btn btn-bg-light" data-text="Leer Más"><span>Leer Más</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
-
     <section class="footer" style="background: url(assets/images/bg-footer.jpg); background-size: cover;">
       <div class="overlay"></div>
       <div class="container sec-pad">
@@ -607,92 +545,6 @@
     <script src="./assets/js/parallax-hero.js"></script>
     <script src="./assets/js/modernizr.js"></script>
     <script src="./assets/js/wow.min.js"></script>
-    
-    <script>
-      let googleMapsLoaded = false;
-
-      fetch('./config.json')
-        .then(response => response.json())
-        .then(config => {
-          const script = document.createElement('script');
-          script.src = `https://maps.googleapis.com/maps/api/js?key=${config.googleMapsApiKey}&callback=initCustomMap`;
-          script.async = true;
-          script.defer = true;
-          document.head.appendChild(script);
-        })
-        .catch(error => {
-          console.error('No se pudo cargar la API key de Google Maps:', error);
-        });
-
-      function initCustomMap() {
-        googleMapsLoaded = true;
-
-        const script = document.createElement('script');
-        script.src = './assets/js/custom-map.js';
-        script.onload = () => {
-          if (typeof init === 'function') init(); 
-        };
-        document.body.appendChild(script);
-      }
-
-      $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
-        if (googleMapsLoaded && typeof init === 'function') {
-          init();
-        }
-      });
-    </script>
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-      
-        let myPlaylist = new jPlayerPlaylist({
-          jPlayer: "#jquery_jplayer_1",
-          cssSelectorAncestor: "#jp_container_1"
-        }, [
-          {
-            title:"Labels",
-            artist:"DJ Lenin",
-            mp3:"./assets/music/neovaii_1.mp3",
-            poster:"assets/images/news-grid1.jpg"
-          },
-          {
-            title:"Your eyes",
-            artist:"DJ Lenin",
-            mp3:"./assets/music/neovaii_2.mp3",
-            poster:"assets/images/news-grid1.jpg"
-          },
-          {
-            title:"Serendipity",
-            artist:"DJ Lenin",
-            mp3:"./assets/music/neovaii_3.mp3",
-            poster:"assets/images/news-grid1.jpg"
-          },
-          {
-            title:"Buga",
-            artist:"DJ Lenin",
-            mp3:"./assets/music/neovaii_4.mp3",
-            poster:"assets/images/news-grid1.jpg"
-          },
-          
-        ], {
-          swfPath: "jplayer",
-          supplied: "mp3",
-          wmode: "window",
-          useStateClassSkin: true,
-          autoBlur: false,
-          smoothPlayBar: true,
-          keyEnabled: true,
-          remainingDuration: true,
-          toggleDuration: true
-        });
-
-        const startPlayback = () => {
-          myPlaylist.play();
-          document.removeEventListener('click', startPlayback); 
-        };
-
-        document.addEventListener('click', startPlayback);
-      });
-    </script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
